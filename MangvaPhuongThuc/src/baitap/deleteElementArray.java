@@ -17,7 +17,7 @@ public class deleteElementArray {
         }
         int x = -1;
         n = delete(arr, n, x);
-        System.out.print("\n Sau khi xoa: ");
+        System.out.print("\nSau khi xoa: ");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
