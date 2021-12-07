@@ -21,9 +21,9 @@ public class minMaxMang2Chieu {
                 System.out.println(arr[i][j]);
             }
         }
-        int max = maxArray(arr);
-        System.out.println(max[0]);
-        System.out.println(max[1]);
+//        int max = maxArray(arr);
+//        System.out.println(max[0]);
+//        System.out.println(max[1]);
     }
     public static int [] maxArray(int [][] arr) {
         int max = arr [0][0];
