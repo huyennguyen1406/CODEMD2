@@ -1,21 +1,29 @@
 package stopwatch;
 
 public class stopWatch {
-    double startTime;
-    double endTime;
+    private long startTime;
+    private long endTime;
 
-    public StopWatch() {
+    public stopWatch() {
     }
 
-    public void getStartTime() {
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public void start() {
         startTime = System.currentTimeMillis();
     }
 
-    public void getEndTime() {
+    public void stop() {
         endTime = System.currentTimeMillis();
     }
 
-    public double getElapsedTime() {
-        return endTime - startTime;
+    public long getElapsedTime() {
+        return getEndTime() - getStartTime();
     }
 }
