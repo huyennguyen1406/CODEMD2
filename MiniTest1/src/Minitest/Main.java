@@ -20,6 +20,10 @@ public class Main {
             System.out.println(productList[i].toString());
         }
 
+        System.out.println("Nhap vao ten san pham can tim: ");
+        String nameProduct = scanner.nextLine();
+        int count = 0; 
+
         double sumProduct = 0;
         for (int i = 0; i < productList.length; i++) {
             sumProduct += productList[i].getPrice();
