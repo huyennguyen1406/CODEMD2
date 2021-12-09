@@ -1,4 +1,4 @@
-package thuchanh;
+package thuchanh.static_method;
 
 public class TestStaticMethod {
     public static void main(String[] args) {
