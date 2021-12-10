@@ -50,6 +50,10 @@ public class Product {
         this.type = type;
     }
 
+    public static String getUnit() {
+        return unit;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -60,4 +64,5 @@ public class Product {
                 ", unit='" + unit + '\'' +
                 '}';
     }
+    
 }

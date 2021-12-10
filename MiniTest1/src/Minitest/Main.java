@@ -20,9 +20,18 @@ public class Main {
             System.out.println(productList[i].toString());
         }
 
-        System.out.println("Nhap vao ten san pham can tim: ");
+        System.out.println("Nhap vao ten san pham tim kiem: ");
         String nameProduct = scanner.nextLine();
-        int count = 0; 
+        int count = 0;
+        for (int i = 0; i < productList.length; i++) {
+            if (productList[i].getName().equals(nameProduct)) {
+                System.out.println(productList[i]);
+                count++;
+            }
+            else {
+                System.out.println("San pham khong ton tai");
+            }
+        }
 
         double sumProduct = 0;
         for (int i = 0; i < productList.length; i++) {
@@ -37,13 +46,15 @@ public class Main {
         double price;
         String type;
 
-        System.out.println("Nhap code: ");
+        System.out.println("Nhap ma san pham: ");
         code = scanner.nextInt();
-        System.out.println("Nhap ten: ");
+        scanner.nextLine();
+        System.out.println("Nhap ten san pham: ");
         name = scanner.nextLine();
-        System.out.println("Nhap gia: ");
+        System.out.println("Nhap gia san pham: ");
         price = scanner.nextDouble();
-        System.out.println("Nhap loai: ");
+        scanner.nextLine();
+        System.out.println("Nhap loai san pham: ");
         type = scanner.nextLine();
 
         return new Product(code, name, price, type);
