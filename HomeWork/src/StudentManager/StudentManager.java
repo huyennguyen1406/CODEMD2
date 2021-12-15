@@ -1,5 +1,7 @@
 package StudentManager;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class StudentManager {
@@ -38,26 +40,7 @@ public class StudentManager {
         this.id = id;
     }
 
-    public void addStudent(Scanner scanner) {
-        scanner.nextLine();
-        System.out.print("Enter full name: ");
-        String name = scanner.nextLine();
-        System.out.print("Enter age: ");
-        int age = scanner.nextInt();
-        scanner.nextLine();
-        System.out.print("Enter gender: ");
-        String gender = scanner.nextLine();
-        System.out.print("Enter address: ");
-        String address = scanner.nextLine();
-        System.out.print("Enter GPA: ");
-        double gpa = scanner.nextDouble();
-
-        students[index] = new Student(name, age, gender, address, gpa, id);
-        index++;
-        id++;
-    }
-
-    public void displayAllStudent() {
+    public void displayStudent() {
         for (Student student : students) {
             boolean compareByNull = student != null;
             if (compareByNull) {
@@ -66,32 +49,93 @@ public class StudentManager {
         }
     }
 
-    public void findMaxGpa() {
-        double maxGpa = students[0].getGpa();
+    public void displayMaxGpa() {
+        double maxGpa = students[0].getGpa()  ;
+        Student s = students[0];
         for (Student student : students) {
-            if (student != null && maxGpa < student.getGpa()) {
+            if (student != null && student.getGpa() > maxGpa) {
                 maxGpa = student.getGpa();
+                s = student;
             }
         }
-        for (Student student : students) {
-            if (student != null && maxGpa == student.getGpa()) {
-                System.out.println(student);
-            }
-        }
+        System.out.println(s);
+        System.out.println("---------------");
     }
 
-    public void findMinGpa() {
+    public void displayMinGpa() {
         double minGpa = students[0].getGpa();
+        Student s = students[0];
         for (Student student : students) {
-            if (student != null && minGpa > student.getGpa()) {
+            if (student != null && student.getGpa() < minGpa) {
                 minGpa = student.getGpa();
+                s = student;
             }
         }
+        System.out.println(s);
+        System.out.println("---------------");
+    }
+
+    public void displayByGender(String gender) {
         for (Student student : students) {
-            if (student != null && minGpa == student.getGpa()) {
+            if (student != null && student.getGender().equals(gender)) {
                 System.out.println(student);
             }
         }
+        System.out.println("---------------");
+    }
+
+    public void searchByName(String name) {
+        for (Student student : students) {
+            if (student != null && student.getName().equals(name)) {
+                System.out.println(student);
+            }
+        }
+        System.out.println("---------------");
+    }
+
+    public void addStudent(Student student) {
+        if (index == students.length) {
+            students = Arrays.copyOf(students, students.length * 2);
+        }
+        students[index] = student;
+        index++;
+        System.out.println("Thêm thành công!");
+        System.out.println("---------------");
+    }
+
+    public void deleteStudent(String name) {
+        int index = 0;
+        Student[] studentList = new Student[students.length];
+        for (Student student : students) {
+            if (student != null && !student.getName().equals(name)) {
+                studentList[index] = student;
+                index++;
+            }
+        }
+        students = studentList;
+        System.out.println("Xóa thành công!");
+        System.out.println("---------------");
+    }
+
+    public void sortByGpa() {
+        Arrays.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                if (o1 != null && o2 != null) {
+                    if (o1.getGpa() < o2.getGpa()) {
+                        return -1;
+                    } else if (o1.getGpa() > o2.getGpa()) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                } else {
+                    return 0;
+                }
+            }
+        });
+        System.out.println("Sắp xếp thành công!");
+        System.out.println("---------------");
     }
 
 }
