@@ -3,7 +3,7 @@ package Minitest02;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class PersonManager extends Manager{
+public abstract class PersonManager implements Manager{
     private ArrayList<Person> personArrayList;
 
     public PersonManager() {
@@ -26,7 +26,7 @@ public class PersonManager extends Manager{
     @Override
     public void addPerson(Person person) {
         if (findIndex() == personArrayList) {
-            person = Arrays.copyOf(person, personArrayList * 2);
+            person = Arrays.copyOf(person, person * 2);
         }
         person[findIndex()] = person;
         findIndex()++;
