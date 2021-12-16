@@ -1,4 +1,4 @@
-package Minitest;
+package Minitest01;
 
 import java.util.Scanner;
 

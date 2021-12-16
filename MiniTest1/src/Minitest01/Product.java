@@ -1,4 +1,4 @@
-package Minitest;
+package Minitest01;
 
 public class Product {
     private int code;
