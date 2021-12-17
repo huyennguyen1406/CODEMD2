@@ -10,61 +10,81 @@ public class MyList<E> {
     public MyList() {
         elements = new Object[DEFAULT_CAPACITY];
     }
-    private void ensureCapa() {
-        int newSize = elements.length * 2;
-        if (size == elements.length) {
-            elements = Arrays.copyOf(elements, newSize);
-        }
+
+    public MyList(int capacity) {
+        elements = new Object[capacity];
     }
-    public void add(E o) {
+
+    private void ensureCapacity() {
+        int newSize = elements.length * 2;
+        elements = Arrays.copyOf(elements, newSize);
+    }
+    public void add(int index, E element) {
         if (size == elements.length) {
-            ensureCapa();
+            ensureCapacity();
         }
-        elements[size++] = o;
+        for (int i = size; i > index; i--) {
+            elements[i] = elements[i - 1];
+        }
+        elements[index] = element;
+        size++;
     }
 
     public E remove(int index) {
-        for (int i = 0; i < index; i++) {
-
+        Object e = (E) elements[index];
+        for (int i = index; i < size; i++) {
+            elements[i] = elements[i + 1];
         }
+        elements[size - 1] = null;
+        size--;
+        return (E) e;
     }
 
     public int size() {
-        return this.size;
+        this.size;
     }
 
     public E clone(){
-        elements.clone();
+        Object e = (E) Arrays.copyOf(elements, size);
+        return (E[]) e;
     }
+
     public boolean contains(E o){
-        return
-    }
-
-    public int indexOf(){
-        for (int i = 0; i < elements.length; i++) {
-
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(o)) {
+                return true;
+            }
         }
+        return false;
     }
 
-    public boolean add(E o){
+    public int indexOf(E o){
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(o)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public boolean add(E e){
         if (size == elements.length) {
-            ensureCapa();
+            ensureCapacity();
         }
-        elements[size++] = o;
+        elements[size] = e;
+        size++;
+        return true;
     }
 
-    public void ensureCapacity(int minCapacity){
-    }
 
-    public E get(int i)
-    {
-        if (i >= size || i < 0) {
-            throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i);
-        }
+    public E get(int i) {
         return (E) elements[i];
     }
 
     public void clear(){
-
+        for (int i = 0; i < size; i++) {
+            elements[i] = null;
+        }
+        size = 0;
     }
 }
