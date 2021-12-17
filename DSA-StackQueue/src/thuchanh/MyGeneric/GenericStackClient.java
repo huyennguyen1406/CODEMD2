@@ -1,4 +1,4 @@
-package thuchanh;
+package thuchanh.MyGeneric;
 
 public class GenericStackClient {
 

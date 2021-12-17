@@ -1,4 +1,4 @@
-package thuchanh;
+package thuchanh.MyGeneric;
 
 import java.util.EmptyStackException;
 import java.util.LinkedList;
