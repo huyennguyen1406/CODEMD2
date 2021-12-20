@@ -1,4 +1,4 @@
-package Btvn3;
+package Btvn3.myInterface;
 
 public interface AnimalMethod {
     int run();
