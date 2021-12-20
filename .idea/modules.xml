@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AbstractAndInterface/AbstractAndInterface.iml" filepath="$PROJECT_DIR$/AbstractAndInterface/AbstractAndInterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccessModifier/AccessModifier.iml" filepath="$PROJECT_DIR$/AccessModifier/AccessModifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomatedTesting/AutomatedTesting.iml" filepath="$PROJECT_DIR$/AutomatedTesting/AutomatedTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CODEMD2.iml" filepath="$PROJECT_DIR$/CODEMD2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/ChangeMoney/ChangeMoney.iml" filepath="$PROJECT_DIR$/IntroductionJava/ChangeMoney/ChangeMoney.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClassAndObject/ClassAndObject.iml" filepath="$PROJECT_DIR$/ClassAndObject/ClassAndObject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA-StackQueue/DSA-StackQueue.iml" filepath="$PROJECT_DIR$/DSA-StackQueue/DSA-StackQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA_List/DSA_List.iml" filepath="$PROJECT_DIR$/DSA_List/DSA_List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/Hello/Hello.iml" filepath="$PROJECT_DIR$/IntroductionJava/Hello/Hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWork/HomeWork.iml" filepath="$PROJECT_DIR$/HomeWork/HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCollectionFramework/JavaCollectionFramework.iml" filepath="$PROJECT_DIR$/JavaCollectionFramework/JavaCollectionFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLoop/JavaLoop.iml" filepath="$PROJECT_DIR$/JavaLoop/JavaLoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MangvaPhuongThuc/MangvaPhuongThuc.iml" filepath="$PROJECT_DIR$/MangvaPhuongThuc/MangvaPhuongThuc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MiniTest1/MiniTest1.iml" filepath="$PROJECT_DIR$/MiniTest1/MiniTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CleanCode/apj-calculator/apj-calculator.iml" filepath="$PROJECT_DIR$/CleanCode/apj-calculator/apj-calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CleanCode/apj-cylinder/apj-cylinder.iml" filepath="$PROJECT_DIR$/CleanCode/apj-cylinder/apj-cylinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CleanCode/apj-fizzbuzz/apj-fizzbuzz.iml" filepath="$PROJECT_DIR$/CleanCode/apj-fizzbuzz/apj-fizzbuzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomatedTesting/apj-junit-calculator/apj-junit-calculator.iml" filepath="$PROJECT_DIR$/AutomatedTesting/apj-junit-calculator/apj-junit-calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/bmi-calculator/bmi-calculator.iml" filepath="$PROJECT_DIR$/IntroductionJava/bmi-calculator/bmi-calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/day-of-month/day-of-month.iml" filepath="$PROJECT_DIR$/IntroductionJava/day-of-month/day-of-month.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/leap-year-calculator/leap-year-calculator.iml" filepath="$PROJECT_DIR$/IntroductionJava/leap-year-calculator/leap-year-calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/linear-equation-resolver/linear-equation-resolver.iml" filepath="$PROJECT_DIR$/IntroductionJava/linear-equation-resolver/linear-equation-resolver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/operator-expression/operator-expression.iml" filepath="$PROJECT_DIR$/IntroductionJava/operator-expression/operator-expression.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/readNumber/readNumber.iml" filepath="$PROJECT_DIR$/IntroductionJava/readNumber/readNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/systemTime/systemTime.iml" filepath="$PROJECT_DIR$/IntroductionJava/systemTime/systemTime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntroductionJava/variable-dataType/variable-dataType.iml" filepath="$PROJECT_DIR$/IntroductionJava/variable-dataType/variable-dataType.iml" />
+    </modules>
+  </component>
+</project>
