@@ -9,7 +9,7 @@ public class Dog extends Animal implements AnimalMethod {
 
     @Override
     public String makeSound() {
-        return null;
+        return "Go go";
     }
 
     @Override

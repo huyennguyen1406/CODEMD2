@@ -8,7 +8,7 @@ public class Cat extends Animal implements AnimalMethod{
 
     @Override
     public String makeSound() {
-        return null;
+        return "Meow meow";
     }
 
     @Override

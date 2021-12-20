@@ -9,6 +9,7 @@ public class Animal {
     }
 
     public Animal(String name, int age, double weight) {
+        super();
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -40,8 +41,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "name='" + name + '\'' +
+        return "Animal@name='" + name + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
                 '}';

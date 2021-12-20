@@ -8,7 +8,7 @@ public class Mouse extends Animal implements AnimalMethod{
 
     @Override
     public String makeSound() {
-        return null;
+        return "Chit chit";
     }
 
     @Override
