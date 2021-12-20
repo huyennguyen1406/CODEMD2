@@ -38,6 +38,6 @@ public class Main {
                     manager.displayAll();
                     break;
             }
-        }
+        } while (choice != 0);
     }
 }

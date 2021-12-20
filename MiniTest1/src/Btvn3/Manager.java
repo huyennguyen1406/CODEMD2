@@ -1,16 +1,17 @@
 package Btvn3;
 
-import com.sun.org.apache.xerces.internal.xs.XSNamespaceItemList;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.function.ToIntFunction;
 
 public class Manager {
-    private Set<Animal> animals = new HashSet<>();
-    private static int index = 0;
+    private Set<Animal> animals;
+    Scanner scanner = new Scanner(System.in);
+
+    public Manager(){
+        this.animals = new HashSet<Animal>();
+    }
 
     public Manager (Set<Animal> animals) {
         this.animals = animals;
@@ -24,11 +25,8 @@ public class Manager {
         }
     }
 
-    public void addAnimal(Animal animal) {
-        if (index == animals.size()) {
-        }
-        index++;
-        System.out.println("Them thanh cong");
+    public void addAnimal(int choice) {
+        animals.add(createAnimal(scanner, choice));
     }
 
     public void deleteAnimal(String name) {
@@ -72,6 +70,15 @@ public class Manager {
         }
     }
 
+    public void displayAnimalOfDog(){
+        System.out.println("Tat ca so cho la: ");;
+        for (Animal animal : animals) {
+            if (animal instanceof Dog){
+                System.out.println(animal);
+            }
+        }
+    }
+
     public Animal createAnimal(Scanner scanner, int choice) {
         scanner.nextLine();
         System.out.println("Nhap ten: ");
@@ -80,7 +87,7 @@ public class Manager {
         int age = scanner.nextInt();
         scanner.nextLine();
         if (choice == 1) {
-            return new Animal(name, age);
+            return new Animal();
         } else if (choice == 2) {
             System.out.println("Nhap can nang: ");
             double weight = scanner.nextDouble();
