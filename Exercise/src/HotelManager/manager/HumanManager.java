@@ -1,7 +1,6 @@
 package HotelManager.manager;
 
 import HotelManager.model.Human;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

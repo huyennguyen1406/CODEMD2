@@ -1,8 +1,8 @@
 package HotelManager.main;
 
 import HotelManager.manager.HotelManager;
+import HotelManager.manager.HumanManager;
 import HotelManager.model.Human;
-import HumanManager.HumanManager;
 
 import java.util.Scanner;
 
