@@ -5,9 +5,6 @@ public class Student extends Person{
     private double physPoint;
     private double chemPoint;
 
-    public Student() {
-    }
-
     public Student(int id, String name, int age, double mathPoint, double physPoint, double chemPoint) {
         super(id, name, age);
         this.mathPoint = mathPoint;

@@ -24,6 +24,7 @@ public class StudentManager {
         int id = scanner.nextInt();
         System.out.println("Nhập họ tên: ");
         String name = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Nhập tuổi: ");
         int age = scanner.nextInt();
         System.out.println("Nhập điểm Toán: ");
@@ -93,12 +94,6 @@ public class StudentManager {
             System.out.println(student);
         } else {
             System.out.println("Không có sinh viên có id tương ứng");
-        }
-    }
-
-    public void displayAvgPoint() {
-        for (Student s : students) {
-            System.out.println(s.getId() + " " + ((s.getMathPoint() + s.getPhysPoint() + s.getChemPoint())/3));
         }
     }
 

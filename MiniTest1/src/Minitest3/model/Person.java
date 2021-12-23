@@ -19,10 +19,6 @@ public class Person {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -31,9 +27,6 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
 
     public void setAge(int age) {
         this.age = age;
