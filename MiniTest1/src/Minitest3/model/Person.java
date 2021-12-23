@@ -9,7 +9,7 @@ public class Person {
     public Person() {
     }
 
-    public Person(int id, String name, int age) {
+    public Person(String name, int age) {
         this.id = ++VALUE;
         this.name = name;
         this.age = age;

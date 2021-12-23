@@ -14,56 +14,64 @@ public class Main {
         int choice;
         do {
             System.out.println("---MENU---");
-            System.out.println("1. Hiển thị tất cả sinh viên");
-            System.out.println("2. Thêm sinh viên");
+            System.out.println("1. Thêm sinh viên");
+            System.out.println("2. Sửa sinh viên theo id");
             System.out.println("3. Xóa sinh viên theo id");
-            System.out.println("4. Sửa sinh viên theo id");
-            System.out.println("5. Hiển thị sinh viên theo id");
+            System.out.println("5. Tìm kiếm sinh viên theo id");
             System.out.println("6. Sắp xếp theo điểm trung bình ");
-            System.out.println("7. Hiển thị sinh viên có điểm cao nhất");
+            System.out.println("7. Tìm sinh viên có điểm cao nhất");
             System.out.println("0. Exit");
             System.out.println("Nhập lựa chọn của bạn: ");
             choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-                    studentManager.displayAll();
+                    Student student = studentManager.createStudent();
+                    if (studentManager.addStudent(student)) {
+                        System.out.println("Thêm thành công");
+                    } else {
+                        System.out.println("Thêm không thành công");
+                    }
                     break;
                 case 2:
-                    Student student = studentManager.createStudent();
-                    studentManager.addStudent(student);
+                    System.out.println("Nhập id muốn sửa: ");
+                    int editId = scanner.nextInt();
+                    Student studentEdit = studentManager.updateStudent(editId);
+                    if (studentEdit != null) {
+                        System.out.println("Sửa thành công");
+                        System.out.println(studentEdit);
+                    } else {
+                        System.out.println("Sửa không thành công");
+                    }
                     break;
                 case 3:
-                    System.out.println("Nhập id muốn tìm: ");
-                    int idDelete = scanner.nextInt();
-                    scanner.nextLine();
-                    Student student1 = studentManager.deleteStudent(idDelete);
-                    if (student1 == null) {
-                        System.out.println("không có sinh viên có id tương ứng");
+                    System.out.println("Nhập id muốn xóa: ");
+                    int deleteId = scanner.nextInt();
+                    Student studentDelete = studentManager.deleteStudent(deleteId);
+                    if (studentDelete != null) {
+                        System.out.println("Xóa thành công");
+                        System.out.println(studentDelete);
                     } else {
-                        System.out.println(student1);
+                        System.out.println("Xóa thất bại");
                     }
                     break;
                 case 4:
-                    System.out.println("Nhập vào id sinh viên bạn muốn: ");
-                    int idEdit = scanner.nextInt();
-                    scanner.nextLine();
-                    System.out.println(studentManager.editStudent(idEdit));
-                    break;
-                case 5:
-                    System.out.println("Nhập vào id bạn muốn: ");
-                    int id = scanner.nextInt();
-                    scanner.nextLine();
-                    studentManager.displayStudent(id);
-                    break;
-                case 6:
-                    ArrayList<Student> students = studentManager.studentByPoint();
-                    for (Student s : students) {
-                        System.out.println(s);
+                    System.out.println("Nhập vào id sinh viên muốn tìm: ");
+                    int searchId = scanner.nextInt();
+                    Student studentSearch = studentManager.searchById(searchId);
+                    if (studentSearch != null) {
+                        System.out.println(studentSearch);
+                    } else {
+                        System.out.println("Sinh viên không tồn tại");
                     }
                     break;
-                case 7:
-                    studentManager.maxAvgPoint();
+                case 5:
+                    ArrayList<Student> students = studentManager.sortByAvgPoint();
+                    students.forEach(System.out::println);
+                    break;
+                case 6:
+                    ArrayList<Student> studentMax = studentManager.getStudentsByMaxPoint();
+                    studentMax.forEach(System.out::println);
                     break;
             }
         }

@@ -5,8 +5,8 @@ public class Student extends Person{
     private double physPoint;
     private double chemPoint;
 
-    public Student(int id, String name, int age, double mathPoint, double physPoint, double chemPoint) {
-        super(id, name, age);
+    public Student(String name, int age, double mathPoint, double physPoint, double chemPoint) {
+        super(name, age);
         this.mathPoint = mathPoint;
         this.physPoint = physPoint;
         this.chemPoint = chemPoint;
@@ -36,8 +36,8 @@ public class Student extends Person{
         this.chemPoint = chemPoint;
     }
 
-    public double avgPoint() {
-        return ((getMathPoint() + getPhysPoint() + getChemPoint()) / 3);
+    public double   getAvgPoint() {
+        return ((mathPoint + physPoint + chemPoint) / 3);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class Student extends Person{
         return "Student{" + super.toString() +
                 "mathPoint=" + mathPoint +
                 ", physPoint=" + physPoint +
-                ", chemPoint=" + chemPoint + ", avgPoint=" + avgPoint() +
+                ", chemPoint=" + chemPoint + ", avgPoint=" + getAvgPoint() +
                 '}';
     }
 }

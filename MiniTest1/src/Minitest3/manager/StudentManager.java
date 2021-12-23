@@ -6,25 +6,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentManager {
-    private ArrayList<Student> students;
-    private Scanner scanner = new Scanner(System.in);
-
-    public StudentManager() {
-        this.students = new ArrayList<>();
-    }
-
-    public void displayAll() {
-        for (Student student : students) {
-            System.out.println(student);
-        }
-    }
+    ArrayList<Student> students = new ArrayList<>();
+    Scanner scanner = new Scanner(System.in);
 
     public Student createStudent() {
-        System.out.println("Nhập id: ");
-        int id = scanner.nextInt();
         System.out.println("Nhập họ tên: ");
         String name = scanner.nextLine();
-        scanner.nextLine();
         System.out.println("Nhập tuổi: ");
         int age = scanner.nextInt();
         System.out.println("Nhập điểm Toán: ");
@@ -36,25 +23,14 @@ public class StudentManager {
         System.out.println("Nhập điểm Hóa: ");
         double chem = scanner.nextDouble();
         scanner.nextLine();
-        return new Student(id, name, age, math, phys, chem);
+        return new Student(name, age, math, phys, chem);
     }
 
-    public void addStudent (Student student) {
-        students.add(student);
+    public boolean addStudent (Student student) {
+        return students.add(student);
     }
 
-    public Student deleteStudent(int id) {
-        Student student = null;
-        for (Student s : students) {
-            if (s.getId() == id) {
-                student = s;
-            }
-        }
-        int index = students.indexOf(student);
-        return students.remove(index);
-    }
-
-    public Student editStudent(int id) {
+    public Student updateStudent(int id) {
         Student student = null;
         for (Student s : students) {
             if (s.getId() == id) {
@@ -72,18 +48,19 @@ public class StudentManager {
             System.out.println("Nhập điểm Toán mới: ");
             double math = scanner.nextDouble();
             student.setMathPoint(math);
-            System.out.println("Nhập điểm lý mới: ");
+            System.out.println("Nhập điểm Lý mới: ");
             double phys = scanner.nextDouble();
             student.setPhysPoint(phys);
             System.out.println("Nhập điểm Hóa mới: ");
             double chem = scanner.nextDouble();
             student.setChemPoint(chem);
+            scanner.nextLine();
             students.set(index, student);
         }
         return student;
     }
 
-    public void displayStudent(int id) {
+    public Student deleteStudent(int id) {
         Student student = null;
         for (Student s : students) {
             if (s.getId() == id) {
@@ -91,35 +68,38 @@ public class StudentManager {
             }
         }
         if (student != null) {
-            System.out.println(student);
-        } else {
-            System.out.println("Không có sinh viên có id tương ứng");
+            students.remove(student);
         }
+        return student;
     }
 
-    public ArrayList<Student> studentByPoint() {
-        students.sort((o1, o2) -> (int) (o1.avgPoint() - o2.avgPoint()));
-        System.out.println("Danh sách điểm trung bình đã sắp xếp: ");
+    public Student searchById(int id) {
+        Student student = null;
+        for (Student s : students) {
+            if (s.getId() == id) {
+                student = s;
+            }
+        }
+        return student;
+    }
+    public ArrayList<Student> getStudentsByMaxPoint() {
+        ArrayList<Student> studentsMax = new ArrayList<>();
+        double avg = students.get(0).getAvgPoint();
+        for (Student s : students) {
+            if (s.getAvgPoint() > avg) {
+                avg = s.getAvgPoint();
+            }
+        }
+        for (Student s : students) {
+            if (s.getAvgPoint() == avg) {
+                studentsMax.add(s);
+            }
+        }
+        return studentsMax;
+    }
+
+    public ArrayList<Student> sortByAvgPoint() {
+        students.sort((o1, o2) -> Double.compare(o2.getAvgPoint(), o1.getAvgPoint()));
         return students;
-    }
-
-    public void maxAvgPoint() {
-        ArrayList<Student> students1 = new ArrayList<>();
-
-        double max = students.get(0).avgPoint();
-        for (Student s : students) {
-            if (max < s.avgPoint()) {
-                max = s.avgPoint();
-            }
-        }
-        for (Student s : students) {
-            if (max == s.avgPoint()) {
-                students1.add(s);
-            }
-        }
-        System.out.println("Sinh viên có điểm trung bình cao nhất là:");
-        for (Student s : students1) {
-            System.out.println(s);
-        }
     }
 }
