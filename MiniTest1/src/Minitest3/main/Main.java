@@ -58,6 +58,9 @@ public class Main {
                 case 6:
                     studentManager.displayAvgPoint();
                     break;
+                case 7:
+                    studentManager.maxAvgPoint();
+                    break;
             }
         }
         while (choice != 0);

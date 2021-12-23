@@ -39,12 +39,16 @@ public class Student extends Person{
         this.chemPoint = chemPoint;
     }
 
+    public double avgPoint() {
+        return ((getMathPoint() + getPhysPoint() + getChemPoint()) / 3);
+    }
+
     @Override
     public String toString() {
         return "Student{" + super.toString() +
                 "mathPoint=" + mathPoint +
                 ", physPoint=" + physPoint +
-                ", chemPoint=" + chemPoint +
+                ", chemPoint=" + chemPoint + ", avgPoint=" + avgPoint() +
                 '}';
     }
 }

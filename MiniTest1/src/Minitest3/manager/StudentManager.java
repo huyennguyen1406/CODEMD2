@@ -101,4 +101,19 @@ public class StudentManager {
             System.out.println(s.getId() + " " + ((s.getMathPoint() + s.getPhysPoint() + s.getChemPoint())/3));
         }
     }
+
+    public void maxAvgPoint() {
+        ArrayList<Student> students1 = new ArrayList<>();
+
+        double max = students.get(0).avgPoint();
+        for (Student s : students) {
+            if (max < students.avgPoint()) {
+                students1.add(s);
+            }
+        }
+        System.out.println("Sinh viên có điểm trung bình cao nhất là:");
+        for (Student s : students1) {
+            System.out.println(s);
+        }
+    }
 }
