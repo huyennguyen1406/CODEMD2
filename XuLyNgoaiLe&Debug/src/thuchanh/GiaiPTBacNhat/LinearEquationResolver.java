@@ -1,4 +1,4 @@
-package thuchanh;
+package thuchanh.GiaiPTBacNhat;
 
 import java.util.Scanner;
 
