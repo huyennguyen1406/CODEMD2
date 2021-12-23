@@ -3,6 +3,7 @@ package Minitest3.main;
 import Minitest3.manager.StudentManager;
 import Minitest3.model.Student;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -56,7 +57,10 @@ public class Main {
                     studentManager.displayStudent(id);
                     break;
                 case 6:
-                    studentManager.displayAvgPoint();
+                    ArrayList<Student> students = studentManager.studentByPoint();
+                    for (Student s : students) {
+                        System.out.println(s);
+                    }
                     break;
                 case 7:
                     studentManager.maxAvgPoint();

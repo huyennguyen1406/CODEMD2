@@ -102,12 +102,23 @@ public class StudentManager {
         }
     }
 
+    public ArrayList<Student> studentByPoint() {
+        students.sort((o1, o2) -> (int) (o1.avgPoint() - o2.avgPoint()));
+        System.out.println("Danh sách điểm trung bình đã sắp xếp: ");
+        return students;
+    }
+
     public void maxAvgPoint() {
         ArrayList<Student> students1 = new ArrayList<>();
 
         double max = students.get(0).avgPoint();
         for (Student s : students) {
-            if (max < students.avgPoint()) {
+            if (max < s.avgPoint()) {
+                max = s.avgPoint();
+            }
+        }
+        for (Student s : students) {
+            if (max == s.avgPoint()) {
                 students1.add(s);
             }
         }
