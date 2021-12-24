@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -12,7 +13,6 @@ public class Main {
         BufferedReader br = null;
         try {
             String line;
-            File file;
             br = new BufferedReader(new FileReader("src/TextFile/baitap/ReadFileCsv/Country.csv"));
 
             while ((line = br.readLine()) != null) {
@@ -35,9 +35,7 @@ public class Main {
         List<String> result = new ArrayList<>();
         if (csvLine != null) {
             String[] splitData = csvLine.split(";");
-            for (int i = 0; i < splitData.length; i++) {
-                result.add(splitData[i]);
-            }
+            Collections.addAll(result, splitData);
         }
         return result;
     }
