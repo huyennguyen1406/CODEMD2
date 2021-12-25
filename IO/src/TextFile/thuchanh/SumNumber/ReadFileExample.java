@@ -1,4 +1,4 @@
-package TextFile.thuchanh.TongCacSo;
+package TextFile.thuchanh.SumNumber;
 
 import java.io.BufferedReader;
 import java.io.File;
