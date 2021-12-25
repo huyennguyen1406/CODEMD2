@@ -1,4 +1,4 @@
-package baitap.Comparator;
+package thuchanh.Comparator;
 
 import baitap.Comparable.Circle;
 
