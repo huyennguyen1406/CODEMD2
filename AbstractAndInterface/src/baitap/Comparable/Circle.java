@@ -1,4 +1,4 @@
-package baitap;
+package baitap.Comparable;
 
 public class Circle extends Shape {
     private double radius = 1.0;

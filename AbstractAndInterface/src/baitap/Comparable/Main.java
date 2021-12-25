@@ -1,4 +1,4 @@
-package baitap;
+package baitap.Comparable;
 
 public class Main {
     public static void main(String[] args) {

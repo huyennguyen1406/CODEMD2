@@ -1,4 +1,4 @@
-package baitap;
+package baitap.Comparable;
 
 public abstract class Shape implements Resizeable {
     private String color = "green";

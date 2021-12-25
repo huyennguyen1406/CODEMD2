@@ -1,4 +1,4 @@
-package baitap;
+package baitap.Comparable;
 
 public class Rectangle extends Shape {
     private double width = 1.0;

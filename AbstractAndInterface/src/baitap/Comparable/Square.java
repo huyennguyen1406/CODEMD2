@@ -1,4 +1,4 @@
-package baitap;
+package baitap.Comparable;
 
 public class Square extends Shape {
     private double side;
