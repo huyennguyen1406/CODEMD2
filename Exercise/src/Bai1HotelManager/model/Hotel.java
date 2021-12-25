@@ -1,4 +1,4 @@
-package HotelManager.model;
+package Bai1HotelManager.model;
 
 import java.time.LocalDate;
 

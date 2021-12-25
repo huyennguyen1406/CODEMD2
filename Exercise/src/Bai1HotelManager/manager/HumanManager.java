@@ -1,6 +1,6 @@
-package HotelManager.manager;
+package Bai1HotelManager.manager;
 
-import HotelManager.model.Human;
+import Bai1HotelManager.model.Human;
 import java.util.ArrayList;
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package HotelManager.model;
+package Bai1HotelManager.model;
 
 public class Human {
     private String name;

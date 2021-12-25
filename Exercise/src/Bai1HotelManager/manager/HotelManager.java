@@ -1,7 +1,7 @@
-package HotelManager.manager;
+package Bai1HotelManager.manager;
 
-import HotelManager.model.Hotel;
-import HotelManager.model.Human;
+import Bai1HotelManager.model.Hotel;
+import Bai1HotelManager.model.Human;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
