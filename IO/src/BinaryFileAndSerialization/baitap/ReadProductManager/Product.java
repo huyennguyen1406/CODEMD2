@@ -5,15 +5,17 @@ public class Product {
     private String name;
     private String brand;
     private double price;
+    private String status;
 
     public Product() {
     }
 
-    public Product(int id, String name, String brand, double price) {
+    public Product(int id, String name, String brand, double price, String status) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.price = price;
+        this.status = status;
     }
 
     public int getId() {
@@ -48,6 +50,14 @@ public class Product {
         this.price = price;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -55,6 +65,7 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", brand='" + brand + '\'' +
                 ", price=" + price +
+                ", status='" + status + '\'' +
                 '}';
     }
 }
