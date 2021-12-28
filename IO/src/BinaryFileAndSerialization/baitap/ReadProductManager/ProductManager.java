@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ProductManager {
     private ArrayList<Product> products;
     private Scanner scanner = new Scanner(System.in);
-    private final File pathName = new File("src/baitap/ReadProductManager/produts");
+    private final File pathName = new File("src/baitap/ReadProductManager/products");
 
     public ProductManager() {
         if (pathName.length() == 0) {
@@ -20,13 +20,14 @@ public class ProductManager {
     public Product createProduct() {
         System.out.println("Nhập id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Nhập tên sản phẩm: ");
         String name = scanner.nextLine();
-        scanner.nextLine();
         System.out.println("Nhập hãng: ");
         String brand = scanner.nextLine();
         System.out.println("Nhập giá: ");
         double price = scanner.nextDouble();
+        scanner.nextLine();
         System.out.println("Nhập tình trạng sản phẩm: ");
         String status = scanner.nextLine();
         scanner.nextLine();
