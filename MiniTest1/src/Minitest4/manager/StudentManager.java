@@ -127,7 +127,7 @@ public class StudentManager {
         return student;
     }
 
-    public ArrayList<Student> StudentsByMaxPoint() {
+    public ArrayList<Student> studentsByMaxPoint() {
         ArrayList<Student> studentsMax = new ArrayList<>();
         double max = students.get(0).getAvgPoint();
 

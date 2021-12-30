@@ -67,7 +67,7 @@ public class Main {
                     break;
                 case 8:
                     System.out.println("Sinh viên điểm cao nhất: ");
-                    ArrayList<Student> studentsMax = StudentManager.StudentsByMaxPoint();
+                    ArrayList<Student> studentsMax = StudentManager.studentsByMaxPoint();
                     for (Student student : studentsMax) {
                         System.out.println(student);
                     }
