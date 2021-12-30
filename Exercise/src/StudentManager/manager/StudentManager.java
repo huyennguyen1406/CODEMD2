@@ -4,7 +4,6 @@ import StudentManager.model.Student;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class StudentManager {
@@ -39,8 +38,6 @@ public class StudentManager {
                 break;
         } return gender;
     }
-
-
 
     public Student addStudent() {
         System.out.println("Nhap ho ten: ");
